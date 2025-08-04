@@ -8,13 +8,10 @@ public class InteractiveOrderProcessor {
         Scanner scanner = new Scanner(System.in);
         System.out.println("=== Welcome to the Interactive Order Processor! ===\n");
 
-        ProcessOrder(scanner);
-        StringEquality(scanner);
-
+        ProcessOrder(scanner); // part 1
+        StringEquality(scanner); // part 2
 
     }
-
-
 
     // part 1
     public static void ProcessOrder(Scanner scanner){
@@ -128,6 +125,7 @@ public class InteractiveOrderProcessor {
         System.out.println("💵 Total Cost: $" + totalOrderCost);
     }
 
+    // part 2
     public static void StringEquality(Scanner scanner){
         System.out.println("\n--- 🧶 String Equality Demo ---");
 
@@ -154,7 +152,6 @@ public class InteractiveOrderProcessor {
         System.out.println("1. == compares object references, not the content of the string. Given user inputted strings, they are created as different objects from each other, resulting in a 'false' equality.");
         System.out.println("2. .equals() compares the actual content of the string, this is case sensitive.");
         System.out.println("3. .equalsIgnoreCase() compares the actual content of the string while ignoring the case differences between the strings.");
-
 
     }
 
