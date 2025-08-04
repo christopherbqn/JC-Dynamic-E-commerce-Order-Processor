@@ -7,6 +7,17 @@ public class InteractiveOrderProcessor {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("=== Welcome to the Interactive Order Processor! ===\n");
+
+        ProcessOrder(scanner);
+        StringEquality(scanner);
+
+
+    }
+
+
+
+    // part 1
+    public static void ProcessOrder(Scanner scanner){
         System.out.println("--- 📋Order Details ---");
 
 
@@ -115,14 +126,37 @@ public class InteractiveOrderProcessor {
         // final cost
         double totalOrderCost = totalAfterSurcharge + shippingCost;
         System.out.println("💵 Total Cost: $" + totalOrderCost);
+    }
 
+    public static void StringEquality(Scanner scanner){
+        System.out.println("\n--- 🧶 String Equality Demo ---");
 
+        System.out.print("Enter first String for Comparison: ");
+        String firstString = scanner.nextLine();
 
+        System.out.print("Enter second String for Comparison: ");
+        String secondString = scanner.nextLine();
 
+        System.out.println("\nFirst String: " + firstString);
+        System.out.println("Second String: " + secondString);
 
+        // string equality tests
+        boolean referenceEquality = (firstString == secondString);
+        boolean contentEquality = firstString.equals(secondString);
+        boolean ignoreCaseEquality = firstString.equalsIgnoreCase(secondString);
 
+        System.out.println("\n--- Equality Results ---");
+        System.out.println("1. Using == : " + referenceEquality);
+        System.out.println("2. Using .equals() : " + contentEquality);
+        System.out.println("3. Using .equalsIgnoreCase() : " + ignoreCaseEquality);
+
+        System.out.println("\nExplanation: ");
+        System.out.println("1. == compares object references, not the content of the string. Given user inputted strings, they are created as different objects from each other, resulting in a 'false' equality.");
+        System.out.println("2. .equals() compares the actual content of the string, this is case sensitive.");
+        System.out.println("3. .equalsIgnoreCase() compares the actual content of the string while ignoring the case differences between the strings.");
 
 
     }
+
 
 }
